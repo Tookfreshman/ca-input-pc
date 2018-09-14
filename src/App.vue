@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-      <ca-input @getFile="aa" inputType="file" :fileVerify="verifyFile" :fileType="fileType" :maxSize="maxSize"></ca-input>
+      <!-- <ca-input @getFile="aa" inputType="file" :fileVerify="verifyFile" :fileType="fileType" :maxSize="maxSize" v-model="bb"></ca-input> -->
+      <ca-input inputType="text" v-model="bb"></ca-input>
+      <button @click="print">213</button>
   </div>
 </template>
 
@@ -13,6 +15,7 @@ export default {
           verifyFile: true,
           fileType: [3],
           maxSize: 2,
+          bb: ''
       }
   },
   mounted() {
@@ -21,6 +24,14 @@ export default {
   methods: {
       aa(val){
           console.log(val);
+      },
+      print(){
+          console.log(this.bb);
+      }
+  },
+  watch: {
+      bb(){
+          console.log(this.bb);
       }
   },
   components: {

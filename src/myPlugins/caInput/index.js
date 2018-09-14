@@ -1,10 +1,10 @@
-import caInput from './caInput.vue'
+import CaInputPc from './caInput.vue'
 
 const install = function(Vue) {
     if (typeof window !== 'undefined' && window.Vue) {
         Vue = window.Vue
     }
-    Vue.component('caInput', caInput)
+    Vue.component('ca-input-pc', caInputPc)
 }
 
 const VueCaInput = {
@@ -12,4 +12,4 @@ const VueCaInput = {
 }
 
 export default VueCaInput
-export { caInput }
+export { CaInputPc }

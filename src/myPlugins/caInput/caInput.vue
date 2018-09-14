@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="container">
         <div class="txt-input" v-if="inputType === 'text' || inputType === 'password'">
-            <input :type="inputType" @blur="verify" v-model="value" />
+            <input :type="inputType" @blur="verify" v-model="value" @input="onInput"/>
         </div>
         <div class="file-input" v-if="inputType === 'file'">
             <input type="file" @change="fileUpload($event)" class="hide" ref="uploadItem" />
@@ -81,6 +81,9 @@ export default {
             const regx = this.regexp ? this.regexp : (this.fileType ? defaultRegx : /^.*$/);
             obj.typeVerify = regx.test(type);
             this.$emit("getFile", obj);
+        },
+        onInput() {
+            this.$emit('input', this.value);
         }
     },
     props: {
