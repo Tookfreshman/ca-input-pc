@@ -1,6 +1,6 @@
 {
   "name": "ca-input-pc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a ca input plugin in vue",
   "author": "Took <81023424@qq.com>",
   "private": false,
