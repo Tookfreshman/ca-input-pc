@@ -1,10 +1,8 @@
 # ca-input-pc
 
-----
 a ca input plugin in vue
 
 # Install
-----
 
 **NPM**
 ```cmd
