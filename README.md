@@ -1,6 +1,6 @@
 # ca-input-pc
 
-A CA input plugin for vue
+An  input plugin for vue
 
 # Install
 
